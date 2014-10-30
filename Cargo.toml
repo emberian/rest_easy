@@ -1,0 +1,10 @@
+[package]
+
+name = "rest_easy"
+version = "0.0.1"
+authors = ["Corey Richardson <corey@octayn.net>"]
+
+[lib]
+name = "rest_easy"
+path = "src/lib.rs"
+plugin = true
