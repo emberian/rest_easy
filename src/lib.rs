@@ -12,7 +12,7 @@ use rustc::lint::LintPassObject;
 use rustc::plugin::Registry;
 
 declare_lint!(REST_EASY, Warn,
-              "Tell you when trans starts.")
+              "Tell you when trans starts.");
 
 struct Pass;
 
