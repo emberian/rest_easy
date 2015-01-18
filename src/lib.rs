@@ -1,8 +1,8 @@
-#![feature(plugin_registrar, phase)]
+#![feature(plugin_registrar, plugin)]
 
-#[phase(plugin,link)]
+#[plugin] #[macro_use]
 extern crate syntax;
-#[phase(plugin, link)]
+#[plugin] #[macro_use]
 extern crate rustc;
 
 
@@ -28,5 +28,5 @@ impl LintPass for Pass {
 
 #[plugin_registrar]
 pub fn plugin_registrar(reg: &mut Registry) {
-    reg.register_lint_pass(box Pass as LintPassObject);
+    reg.register_lint_pass(Box::new(Pass) as LintPassObject);
 }
