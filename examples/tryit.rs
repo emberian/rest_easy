@@ -1,6 +1,6 @@
-#![feature(phase)]
+#![feature(plugin)]
 
-#[phase(plugin)] extern crate rest_easy;
+#[plugin] #[no_link] extern crate rest_easy;
 
 fn main() {
     println!("Hello world!");
