@@ -19,7 +19,7 @@ git = "https://github.com/cmr/rest_easy"
 Add to your `main.rs` or `lib.rs`:
 
 ```
-#![feature(phase)]
+#![feature(plugin)]
 
-#[phase(plugin)] extern crate rest_easy
+#[plugin] #[no_link] extern crate rest_easy
 ```
